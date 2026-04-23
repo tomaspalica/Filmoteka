@@ -18,11 +18,15 @@
   width: 87.5%;
 }
 .main-header__link {
+  text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-
+  color: var(--header-main-text-color);
   letter-spacing: 0.02em;
   line-height: normal;
+  /* its for aligning icon to filmoteka text */
+  display: flex;
+  align-items: center;
 }
 .main-header__menu {
   display: flex;
@@ -35,7 +39,8 @@
 }
 .main-header__nav {
   display: flex;
-  width: 51.43%;
+  width: 144px; /* 51.43%; */
+
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -99,9 +104,8 @@
     width: 91.67%;
     gap: 40px;
   }
-  .main-header__link {
+  .main-header__title-wrapper {
     display: flex;
-    align-items: center;
     gap: 8px;
   }
   .main-header__menu h1 {
@@ -109,7 +113,8 @@
     margin: 0px;
   }
   .main-header__nav {
-    width: 20.45%;
+    width: 144px;
+    /* 20.45%; */
   }
   .search-form {
     width: 47.73%;
@@ -138,6 +143,7 @@
 
   .main-header__nav {
     width: 11.84%;
+    /* width: 144px; */
   }
   .search-form {
     width: 32.4%;

@@ -1,5 +1,9 @@
 :root {
   --header-main-text-color: rgba(255, 255, 255, 1);
+  --project-grey: rgba(247, 247, 247, 1);
+  --project-orange: rgba(255, 107, 8, 1);
+  --project-black: rgba(0, 0, 0, 1);
+  --project-red: rgba(255, 0, 27, 1);
 }
 @font-face {
   font-family: "Inter";
