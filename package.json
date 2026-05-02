@@ -12,5 +12,8 @@
     "@vituum/vite-plugin-posthtml": "^2.0.1",
     "posthtml-include": "^2.0.1",
     "vite": "^8.0.4"
+  },
+  "dependencies": {
+    "axios": "1.14.0"
   }
 }
