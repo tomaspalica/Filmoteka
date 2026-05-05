@@ -2,18 +2,17 @@ import { getPopularMovies, getGenres } from "./movie-api";
 import { filterGenres } from "./helpers";
 const filmSection = document.querySelector(".section-films");
 const IMG_URL = "https://image.tmdb.org/t/p/w500/";
-export const createMovieCards = async () => {
-  const popularMovies = await getPopularMovies();
+
+export const createMovieCards = async (movies) => {
   const genresArr = await getGenres();
-  const markup = popularMovies.map((el) => {
+  const markup = movies.map((el) => {
     const genres = filterGenres(el.genre_ids, genresArr);
 
     let correctGenres = [];
     if (genres.length > 3) {
-      correctGenres = genres.slice(0, 3);
-      correctGenres.push("...");
+      correctGenres = genres.slice(0, 3).join(" ") + "...";
     } else {
-      correctGenres = genres;
+      correctGenres = genres.join(" ");
     }
 
     return `<div class="film-card">
@@ -26,7 +25,7 @@ export const createMovieCards = async () => {
     </div>
   </div>`;
   });
-  console.log(markup.join(""));
+
   filmSection.innerHTML = markup.join(" ");
 };
 
